@@ -14,7 +14,7 @@ function App() {
     setResult("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/generate", {
+      const response = await fetch("https://careerpath-ai-production-faa4.up.railway.app/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ skills, interest, level }),
@@ -127,6 +127,22 @@ function App() {
           {result && <pre>{result}</pre>}
         </div>
       </main>
+      <footer className="footer">
+        <p className="footer-sub">
+          Built with React & OpenRouter AI
+        </p>
+
+        <p>
+          © {new Date().getFullYear()}{" "}
+          <a
+            href="https://github.com/michaelsh-dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            michaelsh-dev
+          </a>. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 }

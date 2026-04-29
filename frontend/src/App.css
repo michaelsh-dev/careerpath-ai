@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.22), transparent 30%),
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 30%),
+    #0b0c1a;
+  color: #ffffff;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 22px;
+}
+
+.navbar {
+  max-width: 1180px;
+  margin: 0 auto 30px;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  font-size: 20px;
+}
+
+.badge {
+  padding: 8px 12px;
+  border: 1px solid #343866;
+  border-radius: 999px;
+  color: #c8c9ff;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 13px;
+}
+
+.hero {
+  text-align: center;
+  margin: 45px auto 34px;
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin: 0;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+.hero p {
+  color: #c8c9ff;
+  font-size: 19px;
+  margin: 8px 0 24px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.stats div {
+  min-width: 150px;
+  padding: 14px 18px;
+  border: 1px solid #30345f;
+  border-radius: 16px;
+  background: rgba(24, 25, 47, 0.78);
+}
+
+.stats strong {
+  display: block;
+  font-size: 22px;
+}
+
+.stats span {
+  display: block;
+  color: #aeb0d9;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 26px;
+  align-items: start; /* ⬅️ INI FIXNYA */
+
+}
+
+.card {
+  background: rgba(24, 25, 47, 0.88);
+  border: 1px solid #343866;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #545b9b;
+}
+
+.card h2 {
+  margin: 0;
+}
+
+.small-text {
+  color: #aeb0d9;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+label {
+  display: block;
+  margin: 20px 0 8px;
+  color: #d7d7ff;
+  font-weight: 700;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #444982;
+  background: #0d0e20;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: #7c3aed;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.input-card button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8b5cf6, #2563eb);
+  color: white;
+  font-size: 16px;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.copy-btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #24284d;
+  color: #ffffff;
+  border: 1px solid #454b86;
+}
+
+.result-card {
+  min-height: 520px;
+  text-align: left;
+}
+
+.empty-state {
+  min-height: 330px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #c8c9ff;
+}
+
+.empty-icon {
+  font-size: 48px;
+}
+
+.pulse {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+pre {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  color: #f0f0ff;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  margin: 0;
+  font-size: 15px;
+}
+
+.loading-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+
+.spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 56px;
+  margin: 0;
+  letter-spacing: -2px;
+
+  transform: translateX(12  px); /* ⬅️ geser dikit ke kanan */
+}
+
+.hero-logo-img {
+  width: 80px;
+  height: 80px;
+  transform: translateY(4px) translateX(-16px);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.12);
+    opacity: 0.65;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .navbar {
+    justify-content: flex-end;
+    margin-bottom: 55px;
+  }
+
+  .badge {
+    font-size: 12px;
+    padding: 7px 11px;
+  }
+}
